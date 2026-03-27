@@ -80,7 +80,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/book"
               data-testid="nav-book-btn"
               className="btn-primary text-sm px-6 py-3"
             >
@@ -120,7 +120,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/book"
               className="btn-primary inline-block text-center w-full mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -166,8 +166,8 @@ const HeroSection = () => {
               supporting you to create lasting transformation aligned with your goals and dreams.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-              <a href="#contact" data-testid="hero-cta-primary" className="btn-primary">
-                Let's Connect
+              <a href="/book" data-testid="hero-cta-primary" className="btn-primary">
+                Book a Session
               </a>
               <a href="#about" data-testid="hero-cta-secondary" className="btn-secondary">
                 Learn More
@@ -617,7 +617,7 @@ const Footer = () => {
           <p className="text-[#8A9A86] text-lg max-w-md mx-auto mb-8">
             Taking the first step is often the hardest. I'm here when you're ready.
           </p>
-          <a href="#contact" data-testid="footer-cta" className="btn-primary bg-[#8A9A86] hover:bg-[#748570]">
+          <a href="/book" data-testid="footer-cta" className="btn-primary bg-[#8A9A86] hover:bg-[#748570]">
             Book a Consultation
           </a>
         </motion.div>
