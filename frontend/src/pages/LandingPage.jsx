@@ -187,7 +187,7 @@ const HeroSection = () => {
             className="order-1 md:order-2 relative"
           >
             {/* Decorative blob */}
-            <div className="absolute -top-8 -right-8 w-full h-full bg-[#F5D547]/30 blob-shape" />
+            <div className="absolute -top-8 -right-8 w-full h-full bg-[#FFCBA4]/40 blob-shape" />
             <div className="profile-image-container relative z-10 img-hover-lift">
               <img
                 src={PROFILE_IMAGE}
