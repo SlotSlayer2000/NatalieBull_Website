@@ -1,0 +1,152 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy)",
+  "design_philosophy": "Warm, grounded, and deeply human. Emphasizes connection and sustainable change through natural tones, generous spacing, and organic asymmetry.",
+  "colors": {
+    "background": {
+      "primary": "#F9F6F0",
+      "secondary": "#EAE4D9",
+      "tertiary": "#D6CEC4"
+    },
+    "text": {
+      "primary": "#2A3026",
+      "secondary": "#5C6656",
+      "inverse": "#F9F6F0"
+    },
+    "brand": {
+      "primary": "#8A9A86",
+      "primary_hover": "#748570",
+      "accent": "#C87961",
+      "accent_hover": "#B36750"
+    },
+    "surface": {
+      "card": "#F4EFE6",
+      "border": "#D1C9BC"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Cormorant Garamond', serif",
+      "body": "'Manrope', sans-serif"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-none font-medium text-[#2A3026]",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026]",
+      "h3": "text-2xl sm:text-3xl font-medium text-[#2A3026]",
+      "h4": "text-xl font-medium text-[#2A3026]",
+      "body": "text-base leading-relaxed text-[#5C6656]",
+      "overline": "text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86]"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "border_radius": "rounded-2xl md:rounded-3xl",
+    "grid_gap": "gap-8 md:gap-16"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#8A9A86] hover:bg-[#748570] text-[#F9F6F0] px-8 py-4 rounded-full transition-all duration-300 font-medium",
+      "secondary": "border border-[#8A9A86] text-[#2A3026] hover:bg-[#8A9A86] hover:text-[#F9F6F0] px-8 py-4 rounded-full transition-all duration-300 font-medium"
+    },
+    "cards": {
+      "style": "bg-[#F4EFE6] rounded-3xl p-8 md:p-12 transition-transform duration-300 hover:-translate-y-2 border border-transparent hover:border-[#D1C9BC]",
+      "no_shadow": true
+    },
+    "inputs": {
+      "style": "bg-transparent border-b border-[#D1C9BC] rounded-none px-0 py-3 focus:border-[#8A9A86] focus:ring-0 text-[#2A3026] placeholder:text-[#8D9289] transition-colors"
+    },
+    "header": {
+      "style": "fixed top-0 w-full z-50 bg-[#F9F6F0]/80 backdrop-blur-xl border-b border-[#D1C9BC]/50 transition-all duration-300"
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Subtle lifts (-translate-y-1 or -translate-y-2) on cards and images. Buttons use smooth background transitions.",
+    "entrance": "Staggered fade-up (opacity 0 to 1, translate-y-4 to 0) using framer-motion.",
+    "scroll": "Parallax effect on background images (using framer-motion useScroll).",
+    "marquee": "Slow, organic continuous marquee for therapeutic approaches using 'react-fast-marquee'."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_portrait",
+        "url": "https://images.unsplash.com/photo-1606534498512-1f073c93b9eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjB0aGVyYXBpc3QlMjBwb3J0cmFpdCUyMHdhcm18ZW58MHx8fHwxNzc0NTc1NzE3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Warm, approachable portrait of Natalie holding a coffee cup, conveying human connection.",
+        "alt_text": "Natalie C Bull - Mental Health Social Worker"
+      },
+      {
+        "category": "about_nature_byron",
+        "url": "https://images.unsplash.com/photo-1635149203040-fa2068ddac5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxieXJvbiUyMGJheSUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc0NTc1NzE4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Calming nature scene representing the Byron Bay region, grounding the about section.",
+        "alt_text": "Byron Bay region calming nature"
+      },
+      {
+        "category": "service_yoga",
+        "url": "https://images.pexels.com/photos/6240645/pexels-photo-6240645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Woman performing yoga in nature, representing yoga and mindfulness service.",
+        "alt_text": "Yoga and mindfulness practice outdoors"
+      },
+      {
+        "category": "service_art_therapy",
+        "url": "https://images.pexels.com/photos/6920239/pexels-photo-6920239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Close-up of hands painting abstract art, representing art therapy.",
+        "alt_text": "Art therapy session"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "usage": "Use stroke-width 1.5, soft and elegant icons."
+    }
+  },
+  "sections_structure": [
+    {
+      "name": "Header",
+      "content": "Logo (Natalie C Bull), Navigation (About, Services, Approach, Contact), CTA (Book Consultation)."
+    },
+    {
+      "name": "Hero",
+      "content": "Asymmetric layout. Overline: Accredited Mental Health Social Worker / AOD Counsellor. Headline: Meaningful, sustainable change. Subhead: Therapeutic alliance and human connection in Northern NSW. Primary CTA: Let's Connect. Image: hero_portrait.",
+      "layout_notes": "Use a subtle sage green (#8A9A86) abstract shape blob or large rounded rectangle behind the portrait to add organic depth."
+    },
+    {
+      "name": "Therapeutic Approaches Marquee",
+      "content": "CBT • Motivational Interviewing • ACT • Art Therapy • Mindfulness",
+      "layout_notes": "Very slow, continuous marquee. Serif font. Warm sand background with dark olive text."
+    },
+    {
+      "name": "About",
+      "content": "Title: Rooted in human connection. Bio: 30+ years experience across government & non-government sectors (including NSW Health). Identifying strengths & supporting clients. Upcoming training in Psychedelic-Assisted Therapy (2026). Image: about_nature_byron.",
+      "layout_notes": "Split 50/50 layout. High line-height for body text for readability. Generous padding."
+    },
+    {
+      "name": "Services",
+      "content": "Cards for: Mental Health Counselling, AOD Counselling, Yoga & Mindfulness. Highlight qualifications in a sleek list alongside or below.",
+      "layout_notes": "Bento grid or 3-column. Use service_yoga and service_art_therapy images subtly within cards or as hover reveals."
+    },
+    {
+      "name": "Qualifications",
+      "content": "Master of Social Work, Bachelor of Social Science, Postgraduate Certificate in Art Therapy, Diploma of Yoga Teaching.",
+      "layout_notes": "Minimalist list with subtle top borders for each item. Very clean."
+    },
+    {
+      "name": "Contact",
+      "content": "Contact form for bookings. Fields: Name, Email, Service Interest, Message.",
+      "layout_notes": "Warm, earthy form. Custom input styling using Tailwind border-b instead of full boxes. Soft sage focus states."
+    },
+    {
+      "name": "Footer",
+      "content": "Large Let's Talk CTA. Socials/Contact Info. Location: Northern NSW (Byron Bay region).",
+      "layout_notes": "Massive padding (py-32). Dark olive background, bone white text. High contrast."
+    }
+  ],
+  "technical_instructions": {
+    "libraries_to_install": [
+      "framer-motion",
+      "react-fast-marquee",
+      "lucide-react"
+    ],
+    "component_strategy": "Use raw HTML+Tailwind for organic structural layouts (Hero, About, Marquee). Use heavily customized Shadcn components for Form, Inputs, and Buttons.",
+    "accessibility": "Ensure contrast ratios pass WCAG AA. All interactive elements must have data-testid attributes.",
+    "font_imports": "Import 'Cormorant Garamond' and 'Manrope' from Google Fonts in index.css or index.html."
+  }
+}
