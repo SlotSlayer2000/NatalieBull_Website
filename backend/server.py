@@ -84,6 +84,39 @@ class BookingUpdate(BaseModel):
     notes: Optional[str] = None
 
 
+# Blog Models
+class BlogPost(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    title: str
+    slug: str
+    excerpt: str
+    content: str
+    category: str
+    featured_image: Optional[str] = None
+    status: str = "draft"  # draft, published
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    published_at: Optional[datetime] = None
+
+class BlogPostCreate(BaseModel):
+    title: str
+    slug: str
+    excerpt: str
+    content: str
+    category: str
+    featured_image: Optional[str] = None
+    status: str = "draft"
+
+class BlogPostUpdate(BaseModel):
+    title: Optional[str] = None
+    excerpt: Optional[str] = None
+    content: Optional[str] = None
+    category: Optional[str] = None
+    featured_image: Optional[str] = None
+    status: Optional[str] = None
+
+
 # Available time slots (excluding lunch 12:30-13:30)
 AVAILABLE_SLOTS = [
     "09:30", "10:30", "11:30",  # Morning slots
@@ -315,6 +348,100 @@ async def cancel_booking(booking_id: str):
     await db.bookings.update_one({"id": booking_id}, {"$set": {"status": "cancelled"}})
     
     return {"message": "Booking cancelled successfully", "id": booking_id}
+
+
+# Blog endpoints
+@api_router.get("/blog", response_model=List[BlogPost])
+async def get_blog_posts(status: Optional[str] = None):
+    """Get all blog posts"""
+    query = {}
+    if status:
+        query["status"] = status
+    
+    posts = await db.blog_posts.find(query, {"_id": 0}).sort("created_at", -1).to_list(100)
+    
+    for post in posts:
+        if isinstance(post.get('created_at'), str):
+            post['created_at'] = datetime.fromisoformat(post['created_at'])
+        if isinstance(post.get('published_at'), str):
+            post['published_at'] = datetime.fromisoformat(post['published_at'])
+    
+    return posts
+
+@api_router.get("/blog/{slug}", response_model=BlogPost)
+async def get_blog_post(slug: str):
+    """Get a single blog post by slug"""
+    post = await db.blog_posts.find_one({"slug": slug}, {"_id": 0})
+    
+    if not post:
+        raise HTTPException(status_code=404, detail="Post not found")
+    
+    if isinstance(post.get('created_at'), str):
+        post['created_at'] = datetime.fromisoformat(post['created_at'])
+    if isinstance(post.get('published_at'), str):
+        post['published_at'] = datetime.fromisoformat(post['published_at'])
+    
+    return post
+
+@api_router.post("/blog", response_model=BlogPost)
+async def create_blog_post(input: BlogPostCreate):
+    """Create a new blog post"""
+    # Check if slug exists
+    existing = await db.blog_posts.find_one({"slug": input.slug})
+    if existing:
+        raise HTTPException(status_code=409, detail="A post with this slug already exists")
+    
+    post_dict = input.model_dump()
+    post_obj = BlogPost(**post_dict)
+    
+    if input.status == "published":
+        post_obj.published_at = datetime.now(timezone.utc)
+    
+    doc = post_obj.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    if doc.get('published_at'):
+        doc['published_at'] = doc['published_at'].isoformat()
+    
+    await db.blog_posts.insert_one(doc)
+    return post_obj
+
+@api_router.patch("/blog/{post_id}", response_model=BlogPost)
+async def update_blog_post(post_id: str, update: BlogPostUpdate):
+    """Update a blog post"""
+    post = await db.blog_posts.find_one({"id": post_id}, {"_id": 0})
+    
+    if not post:
+        raise HTTPException(status_code=404, detail="Post not found")
+    
+    update_data = {k: v for k, v in update.model_dump().items() if v is not None}
+    
+    # Set published_at when publishing
+    if update_data.get("status") == "published" and post.get("status") != "published":
+        update_data["published_at"] = datetime.now(timezone.utc).isoformat()
+    
+    if update_data:
+        await db.blog_posts.update_one({"id": post_id}, {"$set": update_data})
+    
+    updated_post = await db.blog_posts.find_one({"id": post_id}, {"_id": 0})
+    
+    if isinstance(updated_post.get('created_at'), str):
+        updated_post['created_at'] = datetime.fromisoformat(updated_post['created_at'])
+    if isinstance(updated_post.get('published_at'), str):
+        updated_post['published_at'] = datetime.fromisoformat(updated_post['published_at'])
+    
+    return updated_post
+
+@api_router.delete("/blog/{post_id}")
+async def delete_blog_post(post_id: str):
+    """Delete a blog post"""
+    post = await db.blog_posts.find_one({"id": post_id})
+    
+    if not post:
+        raise HTTPException(status_code=404, detail="Post not found")
+    
+    await db.blog_posts.delete_one({"id": post_id})
+    
+    return {"message": "Post deleted successfully", "id": post_id}
 
 
 # Include the router in the main app
