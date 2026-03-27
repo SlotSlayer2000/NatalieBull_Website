@@ -217,10 +217,10 @@ const MarqueeSection = () => {
   ];
 
   return (
-    <section data-testid="marquee-section" className="bg-[#EAE4D9] py-6">
+    <section data-testid="marquee-section" className="bg-[#FFAA80]/20 py-6 border-y border-[#FFAA80]/30">
       <Marquee speed={30} gradient={false} pauseOnHover>
         {approaches.map((approach, index) => (
-          <span key={index} className="marquee-item">
+          <span key={index} className="marquee-item text-[#2A3026]">
             {approach}
           </span>
         ))}
@@ -243,7 +243,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="absolute -bottom-6 -left-6 w-full h-full bg-[#C87961]/10 rounded-3xl" />
+              <div className="absolute -bottom-6 -left-6 w-full h-full bg-[#FFAA80]/25 rounded-3xl" />
               <img
                 src={IMAGES.nature}
                 alt="Byron Bay region nature"
@@ -343,8 +343,8 @@ const ServicesSection = () => {
               data-testid={`service-card-${index}`}
               className="service-card bg-[#F4EFE6] rounded-3xl p-8 md:p-10 card-hover border border-transparent hover:border-[#D1C9BC] group"
             >
-              <div className="w-14 h-14 bg-[#8A9A86]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#8A9A86]/20 transition-colors">
-                <service.icon className="w-7 h-7 text-[#8A9A86]" strokeWidth={1.5} />
+              <div className="w-14 h-14 bg-[#FFAA80]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#FFAA80]/35 transition-colors">
+                <service.icon className="w-7 h-7 text-[#C87961]" strokeWidth={1.5} />
               </div>
               <h3 className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026] mb-4">
                 {service.title}
@@ -429,9 +429,9 @@ const ApproachSection = () => {
                 <div
                   key={index}
                   data-testid={`approach-item-${index}`}
-                  className="flex items-center gap-3 p-4 bg-[#F4EFE6] rounded-xl"
+                  className="flex items-center gap-3 p-4 bg-[#F4EFE6] rounded-xl border-l-4 border-[#FFAA80]"
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#8A9A86]" />
+                  <div className="w-2 h-2 rounded-full bg-[#FFAA80]" />
                   <span className="text-[#2A3026]">{approach}</span>
                 </div>
               ))}
@@ -505,20 +505,20 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#8A9A86]/10 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-[#8A9A86]" strokeWidth={1.5} />
+                <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-[#C87961]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-sm text-[#8A9A86] font-medium">Location</p>
+                  <p className="text-sm text-[#C87961] font-medium">Location</p>
                   <p className="text-[#2A3026]">Northern NSW (Byron Bay Region)</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#8A9A86]/10 rounded-xl flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-[#8A9A86]" strokeWidth={1.5} />
+                <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-xl flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-[#C87961]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-sm text-[#8A9A86] font-medium">Email</p>
+                  <p className="text-sm text-[#C87961] font-medium">Email</p>
                   <p className="text-[#2A3026]">hello@nataliecbull.com</p>
                 </div>
               </div>
@@ -604,8 +604,11 @@ const ContactSection = () => {
 // Footer Section
 const Footer = () => {
   return (
-    <footer data-testid="footer" className="py-24 md:py-32 bg-[#2A3026]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+    <footer data-testid="footer" className="py-24 md:py-32 bg-[#2A3026] relative overflow-hidden">
+      {/* Decorative peach accent */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFAA80]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -619,13 +622,13 @@ const Footer = () => {
           <p className="text-[#8A9A86] text-lg max-w-md mx-auto mb-8">
             Taking the first step is often the hardest. I'm here when you're ready.
           </p>
-          <a href="/book" data-testid="footer-cta" className="btn-primary bg-[#8A9A86] hover:bg-[#748570]">
+          <a href="/book" data-testid="footer-cta" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
             Book a Consultation
           </a>
         </motion.div>
 
         <div className="border-t border-[#5C6656]/30 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2 text-[#8A9A86]">
+          <div className="flex items-center gap-2 text-[#FFAA80]">
             <MapPin size={18} />
             <span>Northern NSW, Australia</span>
           </div>

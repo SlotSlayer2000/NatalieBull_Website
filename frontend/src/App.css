@@ -101,7 +101,7 @@
 .marquee-item::after {
   content: '•';
   margin-left: 2rem;
-  color: var(--brand-primary);
+  color: #FFAA80;
 }
 
 /* Section transitions */
