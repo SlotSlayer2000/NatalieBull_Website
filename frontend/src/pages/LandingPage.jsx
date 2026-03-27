@@ -16,7 +16,7 @@ const IMAGES = {
   hero: "https://images.unsplash.com/photo-1606534498512-1f073c93b9eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjB0aGVyYXBpc3QlMjBwb3J0cmFpdCUyMHdhcm18ZW58MHx8fHwxNzc0NTc1NzE3fDA&ixlib=rb-4.1.0&q=85",
   nature: "https://images.unsplash.com/photo-1635149203040-fa2068ddac5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxieXJvbiUyMGJheSUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc0NTc1NzE4fDA&ixlib=rb-4.1.0&q=85",
   yoga: "https://images.pexels.com/photos/6240645/pexels-photo-6240645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  artTherapy: "https://images.pexels.com/photos/6920239/pexels-photo-6920239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  artTherapy: "https://images.pexels.com/photos/45848/kumamoto-japan-aso-cloud-45848.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 };
 
 // Animation variants
@@ -441,7 +441,7 @@ const ApproachSection = () => {
             <div className="mt-10">
               <img
                 src={IMAGES.artTherapy}
-                alt="Art therapy session"
+                alt="Sunrise breaking through clouds over mountains"
                 className="w-full rounded-2xl object-cover aspect-video"
               />
             </div>
