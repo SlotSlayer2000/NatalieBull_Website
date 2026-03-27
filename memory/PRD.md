@@ -29,20 +29,33 @@ Build a beautiful landing page for a counsellor (Natalie C Bull) who is starting
 - [x] Custom organic color palette (Bone White, Sage Green, Warm Terracotta)
 - [x] Cormorant Garamond + Manrope typography
 
+## Booking System (March 2026)
+- [x] Booking page (/book) with multi-step flow
+- [x] Calendar with date selection (weekdays only)
+- [x] Time slots: 9:30, 10:30, 11:30, 13:30, 14:30, 15:30, 16:30 (1-hour sessions)
+- [x] Lunch break excluded (12:30-13:30)
+- [x] Real-time availability checking
+- [x] Booking confirmation with details
+- [x] Admin dashboard (/admin) with password protection
+- [x] Weekly calendar view for admin
+- [x] Bookings table with status management (confirmed/completed/cancelled)
+- [x] Contact inquiries view
+
 ## Prioritized Backlog
 
 ### P0 (Critical) - DONE
 - All core sections implemented
+- Booking system with calendar
 
 ### P1 (High Priority) - NEXT
 - Add testimonials section
-- Email notification on form submission
+- Email notification on form submission/booking
 - Add phone contact option
 
 ### P2 (Medium Priority)
 - Add blog section
-- Online booking integration (Calendly or similar)
 - Add privacy policy page
+- Google Calendar integration for admin
 
 ### P3 (Low Priority)
 - Add animation refinements
@@ -55,6 +68,6 @@ Build a beautiful landing page for a counsellor (Natalie C Bull) who is starting
 - **Design**: Organic & Earthy theme with sage green accents
 
 ## Next Tasks
-1. Add email notification on contact form submission
+1. Add email notifications for new bookings
 2. Create testimonials section
-3. Add online booking integration
+3. Google Calendar sync for admin
