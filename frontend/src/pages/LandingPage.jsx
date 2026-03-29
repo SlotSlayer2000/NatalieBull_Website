@@ -82,11 +82,11 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="/book"
+              href="#contact"
               data-testid="nav-book-btn"
               className="btn-primary text-sm px-6 py-3"
             >
-              Book Consultation
+              Get in Touch
             </a>
           </nav>
 
@@ -122,11 +122,11 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="/book"
+              href="#contact"
               className="btn-primary inline-block text-center w-full mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book Consultation
+              Get in Touch
             </a>
           </div>
         </motion.div>
@@ -168,8 +168,8 @@ const HeroSection = () => {
               supporting you to create lasting transformation aligned with your goals and dreams.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-              <a href="/book" data-testid="hero-cta-primary" className="btn-primary">
-                Book a Session
+              <a href="#contact" data-testid="hero-cta-primary" className="btn-primary">
+                Get in Touch
               </a>
               <a href="#about" data-testid="hero-cta-secondary" className="btn-secondary">
                 Learn More
@@ -622,8 +622,8 @@ const Footer = () => {
           <p className="text-[#8A9A86] text-lg max-w-md mx-auto mb-8">
             Taking the first step is often the hardest. I'm here when you're ready.
           </p>
-          <a href="/book" data-testid="footer-cta" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
-            Book a Consultation
+          <a href="#contact" data-testid="footer-cta" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
+            Get in Touch
           </a>
         </motion.div>
 

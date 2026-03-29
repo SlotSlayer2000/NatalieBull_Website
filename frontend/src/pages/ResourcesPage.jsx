@@ -274,10 +274,10 @@ const ResourcesPage = () => {
               Let's explore how I can support you.
             </p>
             <a
-              href="/book"
+              href="#contact"
               className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-colors"
             >
-              Book a Consultation
+              Get in Touch
             </a>
           </div>
         </motion.div>

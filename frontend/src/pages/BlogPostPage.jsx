@@ -148,10 +148,10 @@ const BlogPostPage = () => {
               All Posts
             </a>
             <a
-              href="/book"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-[#8A9A86] hover:bg-[#748570] text-white px-6 py-3 rounded-full font-medium transition-colors"
             >
-              Book a Session
+              Get in Touch
             </a>
           </div>
         </motion.article>
