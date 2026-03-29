@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import { Menu, X, Heart, Brain, Flower2, GraduationCap, MapPin, Mail, Phone } from "lucide-react";
+import { Menu, X, Heart, Brain, Flower2, GraduationCap, MapPin, Mail } from "lucide-react";
 import { toast } from "sonner";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 // Profile photo from user
 const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/boglppm6_image.png";
@@ -454,37 +450,10 @@ const ApproachSection = () => {
 
 // Contact Section
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    service: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      await axios.post(`${API}/contact`, formData);
-      toast.success("Thank you for your message! I'll be in touch soon.");
-      setFormData({ name: "", email: "", service: "", message: "" });
-    } catch (error) {
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <section id="contact" data-testid="contact-section" className="py-24 md:py-32 bg-[#EAE4D9]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -525,75 +494,33 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Email CTA Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="bg-[#F4EFE6] rounded-3xl p-10 text-center"
           >
-            <form onSubmit={handleSubmit} data-testid="contact-form" className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                  data-testid="contact-name"
-                  className="form-input"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email Address"
-                  required
-                  data-testid="contact-email"
-                  className="form-input"
-                />
-              </div>
-              <div>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  data-testid="contact-service"
-                  className="form-input bg-transparent appearance-none cursor-pointer"
-                >
-                  <option value="">Select a Service</option>
-                  <option value="mental-health">Mental Health Counselling</option>
-                  <option value="aod">AOD Counselling</option>
-                  <option value="yoga">Yoga & Mindfulness</option>
-                  <option value="general">General Enquiry</option>
-                </select>
-              </div>
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  rows={4}
-                  required
-                  data-testid="contact-message"
-                  className="form-input resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                data-testid="contact-submit"
-                className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+            <div className="w-20 h-20 bg-[#FFAA80]/25 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Mail className="w-10 h-10 text-[#C87961]" strokeWidth={1.5} />
+            </div>
+            <h3 className="font-['Cormorant_Garamond'] text-3xl font-medium text-[#2A3026] mb-4">
+              Let's Connect
+            </h3>
+            <p className="text-[#5C6656] leading-relaxed mb-8">
+              I'd love to hear from you. Send me an email and I'll get back to you as soon as possible.
+            </p>
+            <a
+              href="mailto:hello@nataliecbull.com?subject=Counselling%20Enquiry"
+              data-testid="contact-email-btn"
+              className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
+            >
+              Send Email
+            </a>
+            <p className="text-sm text-[#5C6656] mt-6">
+              hello@nataliecbull.com
+            </p>
           </motion.div>
         </div>
       </div>
