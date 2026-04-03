@@ -498,7 +498,7 @@ const FeesSection = () => {
       service: "GP Referrals with Medicare Rebates (Care Plan)",
       upfrontFee: "$180",
       medicareRebate: "$87.24",
-      outOfPocket: "~$93"
+      outOfPocket: "$92.76"
     },
     {
       service: "Private Counselling Sessions",
