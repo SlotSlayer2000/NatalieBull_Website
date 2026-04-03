@@ -505,7 +505,7 @@ const Footer = () => {
         <div className="border-t border-[#5C6656]/30 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2 text-[#FFAA80]">
             <MapPin size={18} />
-            <span>Northern NSW, Australia</span>
+            <span>Northern NSW, Murwillumbah, Australia</span>
           </div>
           <p className="text-[#5C6656] text-sm">
             © {new Date().getFullYear()} Natalie Bull. All rights reserved.
