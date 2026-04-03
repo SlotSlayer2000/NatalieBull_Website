@@ -493,38 +493,67 @@ const InspirationSection = () => {
 
 // Fees Section
 const FeesSection = () => {
+  const fees = [
+    {
+      service: "GP Referrals with Medicare Rebates (Care Plan)",
+      upfrontFee: "$180",
+      medicareRebate: "$87.24",
+      outOfPocket: "~$93"
+    },
+    {
+      service: "Private Counselling Sessions",
+      upfrontFee: "$180",
+      medicareRebate: "NA",
+      outOfPocket: "$180"
+    },
+    {
+      service: "Victims Services Counselling",
+      upfrontFee: "$0",
+      medicareRebate: "NA",
+      outOfPocket: "$0"
+    }
+  ];
+
   return (
     <section id="fees" data-testid="fees-section" className="py-24 md:py-32 bg-[#F4EFE6]">
-      <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
         >
-          <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
-            Investment
-          </p>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-12">
-            Fees
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
+              Investment
+            </p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-4">
+              Pricing
+            </h2>
+            <p className="text-[#5C6656]">All sessions are scheduled for 50 minutes</p>
+          </div>
           
-          <div className="bg-white rounded-3xl p-8 md:p-12 max-w-xl mx-auto">
-            <div className="space-y-6">
-              <div className="flex justify-between items-center pb-4 border-b border-[#D1C9BC]">
-                <span className="text-[#5C6656] font-medium">Session fee</span>
-                <span className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">$180</span>
-              </div>
-              <div className="flex justify-between items-center pb-4 border-b border-[#D1C9BC]">
-                <span className="text-[#5C6656] font-medium">Medicare rebate</span>
-                <span className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#8A9A86]">$87.24</span>
-              </div>
-              <div className="flex justify-between items-center pt-2">
-                <span className="text-[#2A3026] font-semibold">Client out-of-pocket (gap)</span>
-                <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#C87961]">~$93</span>
-              </div>
+          <div className="bg-white rounded-3xl overflow-hidden">
+            {/* Table Header */}
+            <div className="grid grid-cols-4 bg-[#2A3026] text-white">
+              <div className="p-4 md:p-6 font-medium"></div>
+              <div className="p-4 md:p-6 font-medium text-center">Upfront Fee</div>
+              <div className="p-4 md:p-6 font-medium text-center">Medicare Rebate</div>
+              <div className="p-4 md:p-6 font-medium text-center">Out of Pocket (gap)</div>
             </div>
+            
+            {/* Table Rows */}
+            {fees.map((fee, index) => (
+              <div 
+                key={index} 
+                className={`grid grid-cols-4 ${index !== fees.length - 1 ? 'border-b border-[#D1C9BC]' : ''}`}
+              >
+                <div className="p-4 md:p-6 text-[#2A3026] font-medium">{fee.service}</div>
+                <div className="p-4 md:p-6 text-center font-['Cormorant_Garamond'] text-xl text-[#2A3026]">{fee.upfrontFee}</div>
+                <div className="p-4 md:p-6 text-center font-['Cormorant_Garamond'] text-xl text-[#8A9A86]">{fee.medicareRebate}</div>
+                <div className="p-4 md:p-6 text-center font-['Cormorant_Garamond'] text-xl text-[#C87961] font-medium">{fee.outOfPocket}</div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
