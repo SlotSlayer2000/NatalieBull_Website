@@ -60,7 +60,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" data-testid="logo" className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">
+          <a href="/" data-testid="logo" className="font-['Cormorant_Garamond'] text-3xl font-medium text-[#2A3026]">
             Natalie Bull
           </a>
 
@@ -154,7 +154,11 @@ const HeroSection = () => {
               variants={fadeInUp}
               className="text-lg text-[#5C6656] leading-relaxed mb-8 max-w-lg"
             >
-              Accredited Mental Health Social Worker providing compassionate counselling for Alcohol and Other Drugs (AOD) concerns and therapy for trauma. In-person and Telehealth support across Australia. Supporting you in creating meaningful and sustainable change aligned with your values and goals.
+              Accredited Mental Health Social Worker providing compassionate counselling for Alcohol and Other Drugs (AOD) concerns and therapy for trauma.
+              <br /><br />
+              Supporting you to create meaningful and sustainable change aligned with your values and goals.
+              <br /><br />
+              Telehealth support across Australia or in-person counselling based in Murwillumbah.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <a href="#contact" data-testid="hero-cta-primary" className="btn-primary">
@@ -283,22 +287,16 @@ const AboutSection = () => {
 const ServicesSection = () => {
   const services = [
     {
-      icon: Brain,
-      title: "Mental Health Counselling",
-      description: "Evidence-based support for anxiety, depression, stress, and emotional wellbeing using CBT, ACT, and Motivational Interviewing.",
-      image: IMAGES.hero
-    },
-    {
       icon: Heart,
       title: "AOD Counselling",
-      description: "Compassionate alcohol and other drug counselling, supporting you through recovery with understanding and proven therapeutic approaches.",
+      description: "Compassionate AOD counselling provides a non-judgmental space to explore your relationship with substances, honoring your unique strengths and supports you in defining your own path to well-being.",
       image: IMAGES.nature
     },
     {
-      icon: Flower2,
-      title: "Yoga & Mindfulness",
-      description: "Integrating 24+ years of yoga teaching experience into holistic wellbeing practices, including pre and post-natal support.",
-      image: IMAGES.yoga
+      icon: Brain,
+      title: "Trauma Therapy",
+      description: "Providing a safe and confidential space to process trauma at your pace. Helping you to identify strategies to move forward in ways that align with your values.",
+      image: IMAGES.hero
     }
   ];
 
@@ -361,14 +359,14 @@ const InspirationSection = () => {
           className="text-center mb-12"
         >
           <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
-            A New Beginning
+            Next Steps
           </p>
           <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6">
-            Every sunrise brings new possibilities
+            Change is possible
           </h2>
-          <p className="text-[#5C6656] max-w-2xl mx-auto">
-            Just as each day offers a fresh start, therapy provides the opportunity 
-            to explore new perspectives and create meaningful change in your life.
+          <p className="text-[#5C6656] max-w-2xl mx-auto italic">
+            "The future is not fixed, we can make it so much better than the past"
+            <span className="block mt-2 not-italic text-[#8A9A86]">— Rainer Maria Rilke</span>
           </p>
         </motion.div>
         
@@ -420,7 +418,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-[#C87961] font-medium">Location</p>
-                  <p className="text-[#2A3026]">Northern NSW (Byron Bay Region)</p>
+                  <p className="text-[#2A3026]">Northern NSW (Murwillumbah Region)</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -429,7 +427,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-[#C87961] font-medium">Email</p>
-                  <p className="text-[#2A3026]">hello@nataliecbull.com</p>
+                  <p className="text-[#2A3026]">info@nataliebull.com.au</p>
                 </div>
               </div>
             </div>
@@ -453,14 +451,14 @@ const ContactSection = () => {
               I'd love to hear from you. Send me an email and I'll get back to you as soon as possible.
             </p>
             <a
-              href="mailto:hello@nataliecbull.com?subject=Counselling%20Enquiry"
+              href="mailto:info@nataliebull.com.au?subject=Counselling%20Enquiry"
               data-testid="contact-email-btn"
               className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
             >
               Send Email
             </a>
             <p className="text-sm text-[#5C6656] mt-6">
-              hello@nataliecbull.com
+              info@nataliebull.com.au
             </p>
           </motion.div>
         </div>

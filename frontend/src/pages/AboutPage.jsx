@@ -193,7 +193,7 @@ const AboutPage = () => {
             towards meaningful change.
           </p>
           <a
-            href="mailto:hello@nataliecbull.com?subject=Counselling%20Enquiry"
+            href="mailto:info@nataliebull.com.au?subject=Counselling%20Enquiry"
             className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
           >
             Get in Touch
