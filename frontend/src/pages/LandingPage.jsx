@@ -498,8 +498,8 @@ const InspirationSection = () => {
             Change is possible
           </h2>
           <p className="text-[#5C6656] max-w-2xl mx-auto italic">
-            "The future is not fixed, we can make it so much better than the past"
-            <span className="block mt-2 not-italic text-[#8A9A86]">— Rainer Maria Rilke</span>
+            "The curious paradox is that when I accept myself just as I am, then I can change."
+            <span className="block mt-2 not-italic text-[#8A9A86]">— Carl Rogers</span>
           </p>
         </motion.div>
         
