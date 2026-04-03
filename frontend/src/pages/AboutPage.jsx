@@ -9,11 +9,27 @@ const IMAGES = {
 
 const approaches = [
   "Cognitive Behavioural Therapy (CBT)",
-  "Motivational Interviewing",
-  "Acceptance & Commitment Therapy (ACT)",
-  "Art Therapy",
-  "Mindfulness-Based Approaches",
-  "Strength-Based Practice"
+  "Motivational Interviewing (MI)",
+  "Acceptance and Commitment Therapy (ACT)",
+  "Mindfulness-Based Cognitive Therapy (MBCT)",
+  "Psychoeducation",
+  "Strength-Based Approaches"
+];
+
+const whoIWorkWith = [
+  "Alcohol and other drug (AOD) concerns, including harm reduction and recovery",
+  "Trauma and the effects of past or recent traumatic experiences",
+  "Anxiety, stress, and emotional overwhelm",
+  "Life transitions and personal growth",
+  "Relationship difficulties and interpersonal challenges",
+  "Grief, loss, and adjustment to difficult life events"
+];
+
+const accessAndReferrals = [
+  "Medicare rebates available with a Mental Health Treatment Plan from your GP",
+  "Victims Services counselling approved provider",
+  "Private referrals welcome",
+  "Telehealth and in-person counselling available"
 ];
 
 const AboutPage = () => {
@@ -72,21 +88,24 @@ const AboutPage = () => {
               About Me
             </p>
             <h1 className="font-['Cormorant_Garamond'] text-5xl sm:text-6xl tracking-tight leading-none font-medium text-[#2A3026] mb-6">
-              Rooted in human connection
+              Natalie Bull
             </h1>
-            <p className="text-lg text-[#5C6656] leading-relaxed mb-6">
-              I am an experienced Mental Health Social Worker, AOD Counsellor, and Yoga Teacher 
-              with over 30 years of experience across government and non-government sectors, 
-              including NSW Health.
-            </p>
+            <div className="space-y-4 text-[#5C6656] leading-relaxed mb-6">
+              <p>
+                I believe that meaningful change is possible. My approach to counselling is collaborative and goal oriented, working together at your pace toward the outcomes that matter most to you. Sessions are structured, confidential, and compassionate, and incorporate psychological strategies that support your change and strengthen hope. Please see therapeutic approaches below.
+              </p>
+              <p>
+                I am an Accredited Mental Health Social Worker with extensive experience supporting people experiencing trauma, mental health challenges, and concerns related to alcohol and other drug use. This accreditation recognises advanced training and clinical experience in providing evidence-based psychological therapies. My work is grounded in a trauma-informed and compassionate approach, supporting individuals to work toward meaningful change at a pace that feels safe and manageable.
+              </p>
+            </div>
             <div className="flex items-center gap-2 text-[#8A9A86]">
               <MapPin size={18} />
-              <span>Northern NSW (Byron Bay Region), Australia</span>
+              <span>Northern NSW, Murwillumbah, Australia</span>
             </div>
           </motion.div>
         </div>
 
-        {/* My Story */}
+        {/* Who I Work With */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,31 +116,52 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl font-medium text-[#2A3026] mb-6">
-                My Approach
+                Who I Work With
               </h2>
-              <div className="space-y-4 text-[#5C6656] leading-relaxed">
-                <p>
-                  I bring strong interpersonal skills, warmth, and professionalism to my work, 
-                  grounded in a deep belief in the power of therapeutic alliance and human connection.
-                </p>
-                <p>
-                  My practice focuses on identifying individual strengths and supporting clients 
-                  to create meaningful, sustainable change aligned with their goals and dreams.
-                </p>
-                <p>
-                  I draw on evidence-based modalities tailored to each individual's needs, 
-                  creating a safe and supportive space for exploration and growth.
-                </p>
-              </div>
+              <p className="text-[#5C6656] mb-6">I support adults 16+ experiencing:</p>
+              <ul className="space-y-3">
+                {whoIWorkWith.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-[#5C6656]">
+                    <div className="w-2 h-2 rounded-full bg-[#FFAA80] mt-2 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="relative">
               <div className="absolute -bottom-6 -left-6 w-full h-full bg-[#FFAA80]/20 rounded-3xl" />
               <img
                 src={IMAGES.nature}
-                alt="Byron Bay nature"
+                alt="Nature scene"
                 className="relative z-10 w-full rounded-3xl object-cover aspect-[4/3]"
               />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Access and Referrals */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="bg-[#EAE4D9] rounded-3xl p-10 md:p-16">
+            <h2 className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl font-medium text-[#2A3026] mb-8">
+              Access and Referrals
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {accessAndReferrals.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl"
+                >
+                  <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
+                  <span className="text-[#2A3026]">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -152,28 +192,6 @@ const AboutPage = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </motion.div>
-
-        {/* Future Training */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20 text-center"
-        >
-          <div className="bg-[#2A3026] rounded-3xl p-10 md:p-16">
-            <p className="text-[#FFAA80] text-sm tracking-[0.2em] uppercase font-semibold mb-4">
-              Coming Soon
-            </p>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl font-medium text-[#F9F6F0] mb-4">
-              Psychedelic-Assisted Therapy
-            </h2>
-            <p className="text-[#8A9A86] max-w-2xl mx-auto">
-              I am currently training in Psychedelic-Assisted Therapy (commencing 2026), 
-              expanding my toolkit to offer innovative approaches to mental health and healing.
-            </p>
           </div>
         </motion.div>
 
