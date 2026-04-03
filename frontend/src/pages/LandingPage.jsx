@@ -346,6 +346,110 @@ const ServicesSection = () => {
   );
 };
 
+// Getting Started Section
+const GettingStartedSection = () => {
+  const pathways = [
+    {
+      number: "1",
+      title: "GP Referrals & Medicare Rebates",
+      description: "You can access more affordable support through the Better Access initiative. Simply visit your GP to discuss a Mental Health Care Plan (MHCP). With this referral, you are eligible for Medicare rebates on your counselling sessions, significantly reducing your out-of-pocket costs."
+    },
+    {
+      number: "2",
+      title: "Private Counselling Sessions",
+      description: "For those seeking immediate support without a referral, we offer private 1-on-1 sessions. This pathway ensures maximum confidentiality and flexibility, allowing you to book appointments as you need them without Medicare-related documentation or limits."
+    },
+    {
+      number: "3",
+      title: "Victims Services Counselling (Coming Soon)",
+      description: "We are currently in the process of becoming an Approved Victims Services Provider. Soon, we will offer specialized support for those eligible for counselling through Victims Services NSW."
+    }
+  ];
+
+  return (
+    <section id="getting-started" data-testid="getting-started-section" className="py-24 md:py-32 bg-[#F9F6F0]">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
+            Your Path to Support
+          </p>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6">
+            How to Get Started with Counselling
+          </h2>
+          <p className="text-[#5C6656] max-w-3xl mx-auto">
+            Taking the first step toward mental health support can feel overwhelming, but finding the right path shouldn't be. Whether you're looking for local in-person sessions or the convenience of Telehealth, we offer several flexible ways to access professional care tailored to your needs.
+          </p>
+        </motion.div>
+
+        {/* Pathways */}
+        <div className="mb-16">
+          <h3 className="font-['Cormorant_Garamond'] text-2xl sm:text-3xl font-medium text-[#2A3026] mb-8 text-center">
+            Choose the Pathway That Works for You
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {pathways.map((pathway, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-[#F4EFE6] rounded-3xl p-8 border border-transparent hover:border-[#D1C9BC] transition-colors"
+              >
+                <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-full flex items-center justify-center mb-6">
+                  <span className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#C87961]">{pathway.number}</span>
+                </div>
+                <h4 className="font-['Cormorant_Garamond'] text-xl font-medium text-[#2A3026] mb-4">
+                  {pathway.title}
+                </h4>
+                <p className="text-[#5C6656] text-sm leading-relaxed">
+                  {pathway.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Flexible Support */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#2A3026] rounded-3xl p-10 md:p-16"
+        >
+          <h3 className="font-['Cormorant_Garamond'] text-2xl sm:text-3xl font-medium text-[#F9F6F0] mb-4 text-center">
+            Flexible Support, Your Way
+          </h3>
+          <p className="text-[#8A9A86] text-center mb-10 max-w-2xl mx-auto">
+            We believe therapy should fit your lifestyle, not the other way around. All our services are available via:
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-[#3A4036] rounded-2xl p-6">
+              <h4 className="font-medium text-[#FFAA80] mb-2">In-Person Counselling</h4>
+              <p className="text-[#8A9A86] text-sm">
+                Traditional face-to-face sessions in a safe, professional environment.
+              </p>
+            </div>
+            <div className="bg-[#3A4036] rounded-2xl p-6">
+              <h4 className="font-medium text-[#FFAA80] mb-2">Telehealth</h4>
+              <p className="text-[#8A9A86] text-sm">
+                Secure online video or phone consultations from the comfort and privacy of your own home.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Inspiration Section (Beach Image)
 const InspirationSection = () => {
   return (
@@ -524,6 +628,7 @@ const LandingPage = () => {
       <HeroSection />
       <MarqueeSection />
       <ServicesSection />
+      <GettingStartedSection />
       <InspirationSection />
       <ContactSection />
       <Footer />
