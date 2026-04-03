@@ -156,7 +156,7 @@ const HeroSection = () => {
             >
               Accredited Mental Health Social Worker providing compassionate counselling for Alcohol and Other Drugs (AOD) concerns and therapy for trauma.
               <br /><br />
-              Supporting you to create meaningful and sustainable change aligned with your values and goals.
+              Working together to support meaningful, sustainable change that reflects your values and unique goals.
               <br /><br />
               Telehealth support across Australia or in-person counselling based in Murwillumbah.
             </motion.p>
