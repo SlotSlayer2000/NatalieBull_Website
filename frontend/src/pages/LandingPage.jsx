@@ -362,7 +362,7 @@ const GettingStartedSection = () => {
     {
       number: "3",
       title: "Victims Services Counselling (Coming Soon)",
-      description: "I am currently in the process of becoming an Approved Victims Services Provider. Soon, I will offer specialized support for those eligible for counselling through Victims Services NSW."
+      description: "I am currently in the process of becoming an Approved Victims Services Provider. Soon, I will offer specialised support for those eligible for counselling through Victims Services NSW."
     }
   ];
 
@@ -383,7 +383,7 @@ const GettingStartedSection = () => {
             How to Get Started with Counselling
           </h2>
           <p className="text-[#5C6656] max-w-3xl mx-auto">
-            Taking the first step toward mental health support can feel overwhelming, but finding the right path shouldn't be. Whether you're looking for local in-person sessions or the convenience of Telehealth, I offer several flexible ways to access professional care tailored to your needs.
+            Taking the first step toward accessing support can feel overwhelming, but finding the right path shouldn't be. Whether you're looking for in-person sessions or the convenience of Telehealth, I offer several flexible ways to access professional care tailored to your needs.
           </p>
         </motion.div>
 
@@ -428,7 +428,7 @@ const GettingStartedSection = () => {
             Flexible Support, Your Way
           </h3>
           <p className="text-[#8A9A86] text-center mb-10 max-w-2xl mx-auto">
-            I believe therapy should fit your lifestyle, not the other way around. All my services are available via:
+            All my services are available via:
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="bg-[#3A4036] rounded-2xl p-6">
