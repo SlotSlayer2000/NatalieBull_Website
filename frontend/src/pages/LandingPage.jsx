@@ -148,7 +148,7 @@ const HeroSection = () => {
               className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6"
             >
               Alcohol and Other Drugs Counselling<br />
-              <span className="text-[#8A9A86]">Trauma Therapy</span>
+              <span className="text-[#8A9A86]">and Trauma Therapy</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
