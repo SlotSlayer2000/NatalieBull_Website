@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import { Menu, X, Heart, Brain, Flower2, GraduationCap, MapPin, Mail } from "lucide-react";
+import { Menu, X, Heart, Brain, Flower2, GraduationCap, MapPin, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 // Profile photo from user
@@ -419,6 +419,15 @@ const ContactSection = () => {
                 <div>
                   <p className="text-sm text-[#C87961] font-medium">Location</p>
                   <p className="text-[#2A3026]">Northern NSW (Murwillumbah Region)</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-xl flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-[#C87961]" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="text-sm text-[#C87961] font-medium">Phone</p>
+                  <a href="tel:0451618449" className="text-[#2A3026] hover:text-[#8A9A86]">0451 618 449</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
