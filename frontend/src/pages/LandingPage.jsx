@@ -587,35 +587,73 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Access and Referrals */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#F4EFE6] rounded-3xl p-10"
           >
-            <h3 className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026] mb-6">
-              Access and Referrals
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
-                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
-                <span className="text-[#2A3026]">Medicare rebates available with a Mental Health Treatment Plan from your GP</span>
+            <form 
+              data-testid="contact-form" 
+              className="space-y-6"
+              action="https://formsubmit.co/info@nataliebull.com.au"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New Counselling Enquiry from Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://nataliebull.com.au?submitted=true" />
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  data-testid="contact-name"
+                  className="w-full px-0 py-3 bg-transparent border-b border-[#D1C9BC] focus:border-[#8A9A86] outline-none transition-colors text-[#2A3026] placeholder-[#5C6656]/70"
+                />
               </div>
-              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
-                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
-                <span className="text-[#2A3026]">Victims Services counselling approved provider</span>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                  data-testid="contact-email"
+                  className="w-full px-0 py-3 bg-transparent border-b border-[#D1C9BC] focus:border-[#8A9A86] outline-none transition-colors text-[#2A3026] placeholder-[#5C6656]/70"
+                />
               </div>
-              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
-                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
-                <span className="text-[#2A3026]">Private referrals welcome</span>
+              <div>
+                <select
+                  name="service"
+                  required
+                  data-testid="contact-service"
+                  className="w-full px-0 py-3 bg-transparent border-b border-[#D1C9BC] focus:border-[#8A9A86] outline-none transition-colors text-[#2A3026] appearance-none cursor-pointer"
+                >
+                  <option value="">Select a Service</option>
+                  <option value="AOD Counselling">AOD Counselling</option>
+                  <option value="Trauma Therapy">Trauma Therapy</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                </select>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
-                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
-                <span className="text-[#2A3026]">Telehealth and in-person counselling available</span>
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows={4}
+                  required
+                  data-testid="contact-message"
+                  className="w-full px-0 py-3 bg-transparent border-b border-[#D1C9BC] focus:border-[#8A9A86] outline-none transition-colors text-[#2A3026] placeholder-[#5C6656]/70 resize-none"
+                />
               </div>
-            </div>
+              <button
+                type="submit"
+                data-testid="contact-submit"
+                className="w-full bg-[#8A9A86] hover:bg-[#748570] text-white py-4 rounded-full font-medium transition-all hover:-translate-y-1"
+              >
+                Send Message
+              </button>
+            </form>
           </motion.div>
         </div>
       </div>
