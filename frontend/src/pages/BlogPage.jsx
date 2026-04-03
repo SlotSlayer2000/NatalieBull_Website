@@ -9,7 +9,7 @@ const BlogPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex items-center justify-between h-20">
             <a href="/" className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">
-              Natalie C Bull
+              Natalie Bull
             </a>
             <div className="flex items-center gap-6">
               <a href="/resources" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
@@ -95,7 +95,7 @@ const BlogPage = () => {
       {/* Footer */}
       <footer className="bg-[#EAE4D9] py-8 mt-16">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-center text-[#5C6656]">
-          <p>© {new Date().getFullYear()} Natalie C Bull. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Natalie Bull. All rights reserved.</p>
         </div>
       </footer>
     </div>

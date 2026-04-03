@@ -45,7 +45,6 @@ const Header = () => {
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Approach", href: "#approach" },
     { name: "Resources", href: "/resources" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "#contact" }
@@ -62,7 +61,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" data-testid="logo" className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">
-            Natalie C Bull
+            Natalie Bull
           </a>
 
           {/* Desktop Navigation */}
@@ -189,7 +188,7 @@ const HeroSection = () => {
             <div className="profile-image-container relative z-10 img-hover-lift">
               <img
                 src={PROFILE_IMAGE}
-                alt="Natalie C Bull - Mental Health Social Worker"
+                alt="Natalie Bull - Mental Health Social Worker"
                 data-testid="hero-image"
                 className="w-full max-w-md mx-auto rounded-3xl object-cover aspect-[4/5]"
               />
@@ -227,10 +226,19 @@ const MarqueeSection = () => {
 
 // About Section
 const AboutSection = () => {
+  const approaches = [
+    "Cognitive Behavioural Therapy (CBT)",
+    "Motivational Interviewing",
+    "Acceptance & Commitment Therapy (ACT)",
+    "Art Therapy",
+    "Mindfulness-Based Approaches",
+    "Strength-Based Practice"
+  ];
+
   return (
     <section id="about" data-testid="about-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -262,7 +270,7 @@ const AboutSection = () => {
             <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6">
               Rooted in human connection
             </h2>
-            <div className="space-y-4 text-[#5C6656] leading-relaxed">
+            <div className="space-y-4 text-[#5C6656] leading-relaxed mb-8">
               <p>
                 I am an experienced Mental Health Social Worker, AOD Counsellor, and Yoga Teacher 
                 with over 30 years of experience across government and non-government sectors, 
@@ -279,6 +287,24 @@ const AboutSection = () => {
               <p className="text-[#8A9A86] font-medium italic">
                 Currently training in Psychedelic-Assisted Therapy (commencing 2026).
               </p>
+            </div>
+
+            {/* Therapeutic Approaches */}
+            <div className="pt-6 border-t border-[#D1C9BC]">
+              <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
+                Therapeutic Approaches
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {approaches.map((approach, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 bg-[#F4EFE6] rounded-lg border-l-4 border-[#FFAA80]"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-[#FFAA80]" />
+                    <span className="text-[#2A3026] text-sm">{approach}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -356,93 +382,42 @@ const ServicesSection = () => {
   );
 };
 
-// Approach Section (Qualifications)
-const ApproachSection = () => {
-  const qualifications = [
-    { title: "Master of Social Work", institution: "Southern Cross University", year: "2020-2022" },
-    { title: "Postgraduate Certificate in Experiential and Creative Arts Therapy", institution: "Melbourne Institute", year: "2004-2005" },
-    { title: "Bachelor of Social Science (Counselling & Mediation)", institution: "Southern Cross University", year: "1999-2001" },
-    { title: "Diploma of Yoga Teaching", institution: "International Yoga Teachers Association", year: "2016" },
-    { title: "Bachelor of Science - Nursing", institution: "QUT", year: "1990-1993" }
-  ];
-
-  const approaches = [
-    "Cognitive Behavioural Therapy (CBT)",
-    "Motivational Interviewing",
-    "Acceptance & Commitment Therapy (ACT)",
-    "Art Therapy",
-    "Mindfulness-Based Approaches",
-    "Strength-Based Practice"
-  ];
-
+// Inspiration Section (Beach Image)
+const InspirationSection = () => {
   return (
     <section id="approach" data-testid="approach-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid lg:grid-cols-2 gap-16 md:gap-24">
-          {/* Qualifications */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
-              Qualifications
-            </p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-10">
-              Education & Training
-            </h2>
-            <div className="space-y-0">
-              {qualifications.map((qual, index) => (
-                <div key={index} data-testid={`qualification-${index}`} className="qual-item">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-medium text-[#2A3026] mb-1">{qual.title}</h4>
-                      <p className="text-sm text-[#5C6656]">{qual.institution}</p>
-                    </div>
-                    <span className="text-sm text-[#8A9A86] font-medium">{qual.year}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Therapeutic Approaches */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
-              Modalities
-            </p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-10">
-              Therapeutic Approaches
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {approaches.map((approach, index) => (
-                <div
-                  key={index}
-                  data-testid={`approach-item-${index}`}
-                  className="flex items-center gap-3 p-4 bg-[#F4EFE6] rounded-xl border-l-4 border-[#FFAA80]"
-                >
-                  <div className="w-2 h-2 rounded-full bg-[#FFAA80]" />
-                  <span className="text-[#2A3026]">{approach}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Art Therapy Image */}
-            <div className="mt-10">
-              <img
-                src={IMAGES.artTherapy}
-                alt="Colorful beach sunrise over the ocean"
-                className="w-full rounded-2xl object-cover aspect-video"
-              />
-            </div>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
+            A New Beginning
+          </p>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6">
+            Every sunrise brings new possibilities
+          </h2>
+          <p className="text-[#5C6656] max-w-2xl mx-auto">
+            Just as each day offers a fresh start, therapy provides the opportunity 
+            to explore new perspectives and create meaningful change in your life.
+          </p>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <img
+            src={IMAGES.artTherapy}
+            alt="Colorful beach sunrise over the ocean"
+            className="w-full rounded-3xl object-cover aspect-[21/9]"
+          />
+        </motion.div>
       </div>
     </section>
   );
@@ -560,7 +535,7 @@ const Footer = () => {
             <span>Northern NSW, Australia</span>
           </div>
           <p className="text-[#5C6656] text-sm">
-            © {new Date().getFullYear()} Natalie C Bull. All rights reserved.
+            © {new Date().getFullYear()} Natalie Bull. All rights reserved.
           </p>
         </div>
       </div>
@@ -577,7 +552,7 @@ const LandingPage = () => {
       <MarqueeSection />
       <AboutSection />
       <ServicesSection />
-      <ApproachSection />
+      <InspirationSection />
       <ContactSection />
       <Footer />
     </main>
