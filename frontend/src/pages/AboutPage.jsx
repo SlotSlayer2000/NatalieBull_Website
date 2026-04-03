@@ -25,13 +25,6 @@ const whoIWorkWith = [
   "Grief, loss, and adjustment to difficult life events"
 ];
 
-const accessAndReferrals = [
-  "Medicare rebates available with a Mental Health Treatment Plan from your GP",
-  "Victims Services counselling approved provider",
-  "Private referrals welcome",
-  "Telehealth and in-person counselling available"
-];
-
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-[#F9F6F0]">
@@ -136,32 +129,6 @@ const AboutPage = () => {
                 alt="Nature scene"
                 className="relative z-10 w-full rounded-3xl object-cover aspect-[4/3]"
               />
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Access and Referrals */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
-          <div className="bg-[#EAE4D9] rounded-3xl p-10 md:p-16">
-            <h2 className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl font-medium text-[#2A3026] mb-8">
-              Access and Referrals
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {accessAndReferrals.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl"
-                >
-                  <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
-                  <span className="text-[#2A3026]">{item}</span>
-                </div>
-              ))}
             </div>
           </div>
         </motion.div>
