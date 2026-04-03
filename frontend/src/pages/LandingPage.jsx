@@ -496,15 +496,15 @@ const FeesSection = () => {
   const fees = [
     {
       service: "GP Referrals with Medicare Rebates (Care Plan)",
-      upfrontFee: "$180",
+      upfrontFee: "$150",
       medicareRebate: "$87.24",
-      outOfPocket: "$92.76"
+      outOfPocket: "$62.76"
     },
     {
       service: "Private Counselling Sessions",
-      upfrontFee: "$180",
+      upfrontFee: "$150",
       medicareRebate: "NA",
-      outOfPocket: "$180"
+      outOfPocket: "$150"
     },
     {
       service: "Victims Services Counselling",
