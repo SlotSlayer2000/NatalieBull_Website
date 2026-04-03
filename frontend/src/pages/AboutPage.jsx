@@ -207,7 +207,7 @@ const AboutPage = () => {
             Ready to Begin?
           </h2>
           <p className="text-[#5C6656] mb-8 max-w-md mx-auto">
-            I'd love to hear from you. Let's explore how we can work together 
+            I'd love to hear from you. Let's explore how I can support you 
             towards meaningful change.
           </p>
           <a

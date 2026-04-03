@@ -357,12 +357,12 @@ const GettingStartedSection = () => {
     {
       number: "2",
       title: "Private Counselling Sessions",
-      description: "For those seeking immediate support without a referral, we offer private 1-on-1 sessions. This pathway ensures maximum confidentiality and flexibility, allowing you to book appointments as you need them without Medicare-related documentation or limits."
+      description: "For those seeking immediate support without a referral, I offer private 1-on-1 sessions. This pathway ensures maximum confidentiality and flexibility, allowing you to book appointments as you need them without Medicare-related documentation or limits."
     },
     {
       number: "3",
       title: "Victims Services Counselling (Coming Soon)",
-      description: "We are currently in the process of becoming an Approved Victims Services Provider. Soon, we will offer specialized support for those eligible for counselling through Victims Services NSW."
+      description: "I am currently in the process of becoming an Approved Victims Services Provider. Soon, I will offer specialized support for those eligible for counselling through Victims Services NSW."
     }
   ];
 
@@ -383,7 +383,7 @@ const GettingStartedSection = () => {
             How to Get Started with Counselling
           </h2>
           <p className="text-[#5C6656] max-w-3xl mx-auto">
-            Taking the first step toward mental health support can feel overwhelming, but finding the right path shouldn't be. Whether you're looking for local in-person sessions or the convenience of Telehealth, we offer several flexible ways to access professional care tailored to your needs.
+            Taking the first step toward mental health support can feel overwhelming, but finding the right path shouldn't be. Whether you're looking for local in-person sessions or the convenience of Telehealth, I offer several flexible ways to access professional care tailored to your needs.
           </p>
         </motion.div>
 
@@ -428,7 +428,7 @@ const GettingStartedSection = () => {
             Flexible Support, Your Way
           </h3>
           <p className="text-[#8A9A86] text-center mb-10 max-w-2xl mx-auto">
-            We believe therapy should fit your lifestyle, not the other way around. All our services are available via:
+            I believe therapy should fit your lifestyle, not the other way around. All my services are available via:
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="bg-[#3A4036] rounded-2xl p-6">
@@ -512,7 +512,7 @@ const ContactSection = () => {
             </h2>
             <p className="text-[#5C6656] leading-relaxed mb-8 max-w-md">
               Ready to take the first step? Reach out to schedule a consultation 
-              and discover how we can work together towards meaningful change.
+              and discover how I can support you towards meaningful change.
             </p>
 
             <div className="space-y-4">
