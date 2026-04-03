@@ -147,14 +147,14 @@ const HeroSection = () => {
               variants={fadeInUp}
               className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6"
             >
-              Alcohol and Other Drugs (AOD) Counselling<br />
+              Alcohol and Other Drugs Counselling<br />
               <span className="text-[#8A9A86]">Trauma Therapy</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
               className="text-lg text-[#5C6656] leading-relaxed mb-8 max-w-lg"
             >
-              Accredited Mental Health Social Worker providing compassionate counselling for AOD concerns and therapy for trauma. In-person and Telehealth support across Australia. Supporting you in creating meaningful and sustainable change aligned with your values and goals.
+              Accredited Mental Health Social Worker providing compassionate counselling for Alcohol and Other Drugs (AOD) concerns and therapy for trauma. In-person and Telehealth support across Australia. Supporting you in creating meaningful and sustainable change aligned with your values and goals.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <a href="#contact" data-testid="hero-cta-primary" className="btn-primary">
