@@ -546,33 +546,35 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Email CTA Card */}
+          {/* Access and Referrals */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#F4EFE6] rounded-3xl p-10 text-center"
+            className="bg-[#F4EFE6] rounded-3xl p-10"
           >
-            <div className="w-20 h-20 bg-[#FFAA80]/25 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Mail className="w-10 h-10 text-[#C87961]" strokeWidth={1.5} />
-            </div>
-            <h3 className="font-['Cormorant_Garamond'] text-3xl font-medium text-[#2A3026] mb-4">
-              Let's Connect
+            <h3 className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026] mb-6">
+              Access and Referrals
             </h3>
-            <p className="text-[#5C6656] leading-relaxed mb-8">
-              I'd love to hear from you. Send me an email and I'll get back to you as soon as possible.
-            </p>
-            <a
-              href="mailto:info@nataliebull.com.au?subject=Counselling%20Enquiry"
-              data-testid="contact-email-btn"
-              className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
-            >
-              Send Email
-            </a>
-            <p className="text-sm text-[#5C6656] mt-6">
-              info@nataliebull.com.au
-            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
+                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
+                <span className="text-[#2A3026]">Medicare rebates available with a Mental Health Treatment Plan from your GP</span>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
+                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
+                <span className="text-[#2A3026]">Victims Services counselling approved provider</span>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
+                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
+                <span className="text-[#2A3026]">Private referrals welcome</span>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-[#F9F6F0] rounded-xl">
+                <div className="w-2 h-2 rounded-full bg-[#8A9A86] mt-2 flex-shrink-0" />
+                <span className="text-[#2A3026]">Telehealth and in-person counselling available</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
