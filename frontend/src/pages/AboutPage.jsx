@@ -4,7 +4,7 @@ import { ChevronLeft, MapPin } from "lucide-react";
 const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/boglppm6_image.png";
 
 const IMAGES = {
-  nature: "https://images.unsplash.com/photo-1635149203040-fa2068ddac5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxieXJvbiUyMGJheSUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc0NTc1NzE4fDA&ixlib=rb-4.1.0&q=85"
+  nature: "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/xmlhdi97_River.png"
 };
 
 const approaches = [
