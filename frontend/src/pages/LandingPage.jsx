@@ -450,6 +450,35 @@ const GettingStartedSection = () => {
   );
 };
 
+// Let's Talk CTA Section
+const LetsTalkSection = () => {
+  return (
+    <section className="py-24 md:py-32 bg-[#2A3026] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFAA80]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="font-['Cormorant_Garamond'] text-5xl sm:text-6xl lg:text-7xl font-medium text-[#F9F6F0] mb-6">
+            Let's Talk
+          </h2>
+          <p className="text-[#8A9A86] text-lg max-w-md mx-auto mb-8">
+            Taking the first step is often the hardest. I'm here when you're ready.
+          </p>
+          <a href="#contact" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
+            Get in Touch
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Inspiration Section (Beach Image)
 const InspirationSection = () => {
   return (
@@ -693,30 +722,9 @@ const ContactSection = () => {
 // Footer Section
 const Footer = () => {
   return (
-    <footer data-testid="footer" className="py-24 md:py-32 bg-[#2A3026] relative overflow-hidden">
-      {/* Decorative peach accent */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFAA80]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="footer-cta text-[#F9F6F0] mb-6">
-            Let's Talk
-          </h2>
-          <p className="text-[#8A9A86] text-lg max-w-md mx-auto mb-8">
-            Taking the first step is often the hardest. I'm here when you're ready.
-          </p>
-          <a href="#contact" data-testid="footer-cta" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
-            Get in Touch
-          </a>
-        </motion.div>
-
-        <div className="border-t border-[#5C6656]/30 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer data-testid="footer" className="bg-[#2A3026] py-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2 text-[#FFAA80]">
             <MapPin size={18} />
             <span>Northern NSW, Murwillumbah, Australia</span>
@@ -739,6 +747,7 @@ const LandingPage = () => {
       <MarqueeSection />
       <ServicesSection />
       <GettingStartedSection />
+      <LetsTalkSection />
       <InspirationSection />
       <FeesSection />
       <ContactSection />
