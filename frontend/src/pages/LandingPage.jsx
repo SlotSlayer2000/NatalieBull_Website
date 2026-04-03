@@ -143,30 +143,24 @@ const HeroSection = () => {
             animate="visible"
             className="order-2 md:order-1"
           >
-            <motion.p
-              variants={fadeInUp}
-              className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4"
-            >
-              Accredited Mental Health Social Worker / AOD Counsellor
-            </motion.p>
             <motion.h1
               variants={fadeInUp}
-              className="font-['Cormorant_Garamond'] text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-none font-medium text-[#2A3026] mb-6"
+              className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] font-medium text-[#2A3026] mb-6"
             >
-              Meaningful,<br />sustainable<br />change.
+              Alcohol and Other Drugs (AOD) Counselling<br />
+              <span className="text-[#8A9A86]">Trauma Therapy</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
               className="text-lg text-[#5C6656] leading-relaxed mb-8 max-w-lg"
             >
-              Grounded in therapeutic alliance and human connection, 
-              supporting you to create lasting transformation aligned with your goals and dreams.
+              Accredited Mental Health Social Worker providing compassionate counselling for AOD concerns and therapy for trauma. In-person and Telehealth support across Australia. Supporting you in creating meaningful and sustainable change aligned with your values and goals.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <a href="#contact" data-testid="hero-cta-primary" className="btn-primary">
                 Get in Touch
               </a>
-              <a href="#about" data-testid="hero-cta-secondary" className="btn-secondary">
+              <a href="/about" data-testid="hero-cta-secondary" className="btn-secondary">
                 Learn More
               </a>
             </motion.div>
