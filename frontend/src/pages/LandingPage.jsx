@@ -522,7 +522,6 @@ const LandingPage = () => {
       <Header />
       <HeroSection />
       <MarqueeSection />
-      <AboutSection />
       <ServicesSection />
       <InspirationSection />
       <ContactSection />
