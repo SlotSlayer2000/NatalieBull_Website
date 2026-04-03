@@ -43,7 +43,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "#services" },
     { name: "Resources", href: "/resources" },
     { name: "Blog", href: "/blog" },
@@ -224,21 +224,12 @@ const MarqueeSection = () => {
   );
 };
 
-// About Section
+// About Section - Teaser linking to full page
 const AboutSection = () => {
-  const approaches = [
-    "Cognitive Behavioural Therapy (CBT)",
-    "Motivational Interviewing",
-    "Acceptance & Commitment Therapy (ACT)",
-    "Art Therapy",
-    "Mindfulness-Based Approaches",
-    "Strength-Based Practice"
-  ];
-
   return (
     <section id="about" data-testid="about-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -277,35 +268,16 @@ const AboutSection = () => {
                 including NSW Health.
               </p>
               <p>
-                I bring strong interpersonal skills, warmth, and professionalism to my work, 
-                grounded in a deep belief in the power of therapeutic alliance and human connection.
-              </p>
-              <p>
                 My practice focuses on identifying individual strengths and supporting clients 
                 to create meaningful, sustainable change aligned with their goals and dreams.
               </p>
-              <p className="text-[#8A9A86] font-medium italic">
-                Currently training in Psychedelic-Assisted Therapy (commencing 2026).
-              </p>
             </div>
-
-            {/* Therapeutic Approaches */}
-            <div className="pt-6 border-t border-[#D1C9BC]">
-              <p className="text-sm tracking-[0.2em] uppercase font-semibold text-[#8A9A86] mb-4">
-                Therapeutic Approaches
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {approaches.map((approach, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-3 bg-[#F4EFE6] rounded-lg border-l-4 border-[#FFAA80]"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-[#FFAA80]" />
-                    <span className="text-[#2A3026] text-sm">{approach}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <a
+              href="/about"
+              className="inline-flex items-center gap-2 bg-[#8A9A86] hover:bg-[#748570] text-white px-6 py-3 rounded-full font-medium transition-all hover:-translate-y-1"
+            >
+              Learn More About Me
+            </a>
           </motion.div>
         </div>
       </div>
