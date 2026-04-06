@@ -113,8 +113,8 @@ const AboutPage = () => {
               </h2>
               <p className="text-[#5C6656] mb-6">I support adults 16+ experiencing:</p>
               <ul className="space-y-3">
-                {whoIWorkWith.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-[#5C6656]">
+                {whoIWorkWith.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[#5C6656]">
                     <div className="w-2 h-2 rounded-full bg-[#FFAA80] mt-2 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
@@ -149,9 +149,9 @@ const AboutPage = () => {
               Therapeutic Approaches
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {approaches.map((approach, index) => (
+              {approaches.map((approach) => (
                 <div
-                  key={index}
+                  key={approach}
                   className="flex items-center gap-3 p-4 bg-white rounded-xl border-l-4 border-[#FFAA80]"
                 >
                   <div className="w-2 h-2 rounded-full bg-[#FFAA80]" />

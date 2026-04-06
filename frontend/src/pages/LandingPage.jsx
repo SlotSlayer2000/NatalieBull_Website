@@ -212,8 +212,8 @@ const MarqueeSection = () => {
   return (
     <section data-testid="marquee-section" className="bg-[#FFAA80]/20 py-6 border-y border-[#FFAA80]/30">
       <Marquee speed={30} gradient={false} pauseOnHover>
-        {approaches.map((approach, index) => (
-          <span key={index} className="marquee-item text-[#2A3026]">
+        {approaches.map((approach) => (
+          <span key={approach} className="marquee-item text-[#2A3026]">
             {approach}
           </span>
         ))}
@@ -319,14 +319,14 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
-              key={index}
+              key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              data-testid={`service-card-${index}`}
+              transition={{ duration: 0.6 }}
+              data-testid={`service-card-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
               className="service-card bg-[#F4EFE6] rounded-3xl p-8 md:p-10 card-hover border border-transparent hover:border-[#D1C9BC] group"
             >
               <div className="w-14 h-14 bg-[#FFAA80]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#FFAA80]/35 transition-colors">
@@ -393,13 +393,13 @@ const GettingStartedSection = () => {
             Choose the Pathway That Works for You
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {pathways.map((pathway, index) => (
+            {pathways.map((pathway) => (
               <motion.div
-                key={index}
+                key={pathway.number}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 className="bg-[#F4EFE6] rounded-3xl p-8 border border-transparent hover:border-[#D1C9BC] transition-colors"
               >
                 <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-full flex items-center justify-center mb-6">
@@ -574,7 +574,7 @@ const FeesSection = () => {
             {/* Table Rows */}
             {fees.map((fee, index) => (
               <div 
-                key={index} 
+                key={fee.service} 
                 className={`grid grid-cols-4 ${index !== fees.length - 1 ? 'border-b border-[#D1C9BC]' : ''}`}
               >
                 <div className="p-4 md:p-6 text-[#2A3026] font-medium">{fee.service}</div>

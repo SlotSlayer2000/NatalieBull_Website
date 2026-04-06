@@ -163,12 +163,12 @@ const ResourcesPage = () => {
             className="grid md:grid-cols-2 gap-8"
             data-testid="books-section"
           >
-            {BOOKS.map((book, index) => (
+            {BOOKS.map((book) => (
               <motion.div
-                key={index}
+                key={book.title}
                 variants={fadeInUp}
                 className="bg-[#F4EFE6] rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-[#D1C9BC]"
-                data-testid={`book-card-${index}`}
+                data-testid={`book-card-${book.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <span className="inline-block px-3 py-1 bg-[#8A9A86]/10 text-[#8A9A86] text-sm font-medium rounded-full mb-4">
                   {book.category}
@@ -208,12 +208,12 @@ const ResourcesPage = () => {
             className="grid md:grid-cols-3 gap-8"
             data-testid="people-section"
           >
-            {PEOPLE.map((person, index) => (
+            {PEOPLE.map((person) => (
               <motion.div
-                key={index}
+                key={person.name}
                 variants={fadeInUp}
                 className="bg-[#F4EFE6] rounded-3xl p-8 text-center hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-[#D1C9BC]"
-                data-testid={`person-card-${index}`}
+                data-testid={`person-card-${person.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-[#8A9A86]/20">
                   <img
