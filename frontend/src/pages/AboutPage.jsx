@@ -36,11 +36,8 @@ const AboutPage = () => {
               Natalie Bull
             </a>
             <div className="flex items-center gap-6">
-              <a href="/resources" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
-                Resources
-              </a>
-              <a href="/blog" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
-                Blog
+              <a href="/crisis" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
+                Crisis Support
               </a>
               <a href="/" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium flex items-center gap-2">
                 <ChevronLeft size={18} />
