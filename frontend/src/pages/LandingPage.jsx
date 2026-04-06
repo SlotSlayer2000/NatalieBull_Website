@@ -659,7 +659,6 @@ const ContactSection = () => {
             >
               <input type="hidden" name="_subject" value="New Counselling Enquiry from Website" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://nataliebull.com.au?submitted=true" />
               <div>
                 <input
                   type="text"
