@@ -173,7 +173,7 @@ const CrisisPage = () => {
           <h2 className="font-['Cormorant_Garamond'] text-2xl sm:text-3xl font-medium text-[#2A3026] text-center">
             Crisis & Support Services
           </h2>
-          <p className="text-[#5C6656] text-center mt-2">Northern NSW / Australia</p>
+          <p className="text-[#5C6656] text-center mt-2">Northern NSW, Murwillumbah, Australia</p>
         </motion.div>
 
         {/* Emergency Banner */}

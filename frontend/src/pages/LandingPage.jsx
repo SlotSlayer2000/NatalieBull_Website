@@ -169,7 +169,7 @@ const HeroSection = () => {
             </motion.div>
             <motion.div variants={fadeInUp} className="flex items-center gap-2 mt-8 text-[#5C6656]">
               <MapPin size={18} className="text-[#8A9A86]" />
-              <span className="text-sm">Northern NSW, Australia</span>
+              <span className="text-sm">Northern NSW, Murwillumbah, Australia</span>
             </motion.div>
           </motion.div>
 
@@ -620,7 +620,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-[#C87961] font-medium">Location</p>
-                  <p className="text-[#2A3026]">Northern NSW (Murwillumbah Region)</p>
+                  <p className="text-[#2A3026]">Northern NSW, Murwillumbah, Australia</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
