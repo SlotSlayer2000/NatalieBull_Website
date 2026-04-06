@@ -174,20 +174,12 @@ const AboutPage = () => {
             I'd love to hear from you. Let's explore how I can support you 
             towards meaningful change.
           </p>
-          <button
-            onClick={() => {
-              window.location.href = '/#contact';
-              setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 100);
-            }}
-            className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1 cursor-pointer"
+          <a
+            href="/#contact"
+            className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
           >
             Get in Touch
-          </button>
+          </a>
         </motion.div>
       </main>
 

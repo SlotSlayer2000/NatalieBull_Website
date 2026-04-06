@@ -738,6 +738,19 @@ const Footer = () => {
 
 // Main Landing Page
 const LandingPage = () => {
+  useEffect(() => {
+    // Handle scroll to section when navigating from other pages
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    }
+  }, []);
+
   return (
     <main>
       <Header />
