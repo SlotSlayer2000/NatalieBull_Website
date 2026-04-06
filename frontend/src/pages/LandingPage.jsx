@@ -5,7 +5,7 @@ import { Menu, X, Heart, Brain, Flower2, GraduationCap, MapPin, Mail, Phone } fr
 import { toast } from "sonner";
 
 // Profile photo from user
-const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/sd9h78bl_Natalie.png";
+const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/mlsgra7k_Natalie_02.png";
 
 // Images from design guidelines
 const IMAGES = {
