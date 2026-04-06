@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft, MapPin } from "lucide-react";
 
-const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/sd9h78bl_Natalie.png";
+const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/mlsgra7k_Natalie_02.png";
 
 const IMAGES = {
   nature: "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/xmlhdi97_River.png"
