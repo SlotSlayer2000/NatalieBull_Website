@@ -37,7 +37,7 @@ const HeroSection = () => {
               Telehealth support across Australia or in-person counselling based in Murwillumbah.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-              <a href="/about" data-testid="hero-cta-secondary" className="btn-secondary">
+              <a href="/about" data-testid="hero-cta-secondary" className="inline-block bg-[#FFAA80] hover:bg-[#FF9966] text-[#2A3026] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1">
                 Learn More
               </a>
             </motion.div>
