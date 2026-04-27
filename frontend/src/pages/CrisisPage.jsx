@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, Phone, AlertTriangle } from "lucide-react";
+import { Phone, AlertTriangle } from "lucide-react";
+import { Header, Footer } from "../components/SharedComponents";
 
 const crisisServices = [
   {
@@ -13,7 +14,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Alcohol & Other Drug Support",
+    category: "Alcohol and Other Drug Support",
     services: [
       {
         name: "ADIS (Alcohol Drug Information Service)",
@@ -28,7 +29,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Mental Health & Suicide Support",
+    category: "Mental Health and Suicide Support",
     services: [
       {
         name: "Lifeline",
@@ -53,7 +54,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Domestic & Family Violence",
+    category: "Domestic and Family Violence",
     services: [
       {
         name: "NSW Domestic Violence Line",
@@ -73,7 +74,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Sexual Assault & Victim Support",
+    category: "Sexual Assault and Victim Support",
     services: [
       {
         name: "NSW Sexual Violence Helpline (Full Stop Australia)",
@@ -88,7 +89,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Housing & Crisis Accommodation",
+    category: "Housing and Crisis Accommodation",
     services: [
       {
         name: "Link2Home (NSW Homelessness Line)",
@@ -108,7 +109,7 @@ const crisisServices = [
     ]
   },
   {
-    category: "Aboriginal & Torres Strait Islander Support",
+    category: "Aboriginal and Torres Strait Islander Support",
     services: [
       {
         name: "13YARN",
@@ -122,27 +123,9 @@ const crisisServices = [
 const CrisisPage = () => {
   return (
     <div className="min-h-screen bg-[#F9F6F0]">
-      {/* Header */}
-      <header className="bg-[#F9F6F0]/90 backdrop-blur-xl border-b border-[#D1C9BC]/50 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">
-              Natalie Bull
-            </a>
-            <div className="flex items-center gap-6">
-              <a href="/about" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
-                About
-              </a>
-              <a href="/" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium flex items-center gap-2">
-                <ChevronLeft size={18} />
-                Back to Home
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
-      <main className="max-w-4xl mx-auto px-6 md:px-12 lg:px-24 py-16">
+      <main className="max-w-4xl mx-auto px-6 md:px-12 lg:px-24 py-16 pt-32">
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -171,7 +154,7 @@ const CrisisPage = () => {
           className="mb-10"
         >
           <h2 className="font-['Cormorant_Garamond'] text-2xl sm:text-3xl font-medium text-[#2A3026] text-center">
-            Crisis & Support Services
+            Crisis and Support Services
           </h2>
           <p className="text-[#5C6656] text-center mt-2">Northern NSW, Murwillumbah, Australia</p>
         </motion.div>
@@ -234,35 +217,20 @@ const CrisisPage = () => {
           ))}
         </div>
 
-        {/* Back to Home */}
+        {/* Disclaimer */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="mt-12 p-6 bg-[#F4EFE6] rounded-2xl border border-[#D1C9BC]"
         >
-          <a
-            href="/"
-            className="inline-flex items-center gap-2 text-[#8A9A86] hover:text-[#2A3026] transition-colors"
-          >
-            <ChevronLeft size={18} />
-            Back to Home
-          </a>
+          <p className="text-[#5C6656] text-sm leading-relaxed">
+            While I endeavour to keep these crisis resources current, information is subject to change without notice, and I cannot guarantee the immediate accuracy or availability of third-party services. If you are in immediate danger or experiencing a life-threatening emergency, please contact 000 or proceed to your nearest emergency department immediately.
+          </p>
         </motion.div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#2A3026] text-white py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-center">
-          <p className="font-['Cormorant_Garamond'] text-2xl mb-4">Natalie Bull</p>
-          <p className="text-white/60 text-sm">
-            Accredited Mental Health Social Worker
-          </p>
-          <p className="text-white/40 text-sm mt-6">
-            Northern NSW, Murwillumbah, Australia
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

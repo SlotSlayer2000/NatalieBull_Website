@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { Header, ContactSection, Footer } from "../components/SharedComponents";
 
 const PROFILE_IMAGE = "https://customer-assets.emergentagent.com/job_care-connect-375/artifacts/mlsgra7k_Natalie_02.png";
 
@@ -26,29 +28,24 @@ const whoIWorkWith = [
 ];
 
 const AboutPage = () => {
+  useEffect(() => {
+    // Handle scroll to section when navigating from other pages
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F9F6F0]">
-      {/* Header */}
-      <header className="bg-[#F9F6F0]/90 backdrop-blur-xl border-b border-[#D1C9BC]/50 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#2A3026]">
-              Natalie Bull
-            </a>
-            <div className="flex items-center gap-6">
-              <a href="/crisis" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium">
-                Crisis Support
-              </a>
-              <a href="/" className="text-[#5C6656] hover:text-[#2A3026] text-sm font-medium flex items-center gap-2">
-                <ChevronLeft size={18} />
-                Back to Home
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
-      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-16">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-16 pt-32">
         {/* Hero Section with Photo */}
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-20">
           {/* Photo */}
@@ -158,37 +155,10 @@ const AboutPage = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <h2 className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl font-medium text-[#2A3026] mb-4">
-            Ready to Begin?
-          </h2>
-          <p className="text-[#5C6656] mb-8 max-w-md mx-auto">
-            I'd love to hear from you. Let's explore how I can support you 
-            towards meaningful change.
-          </p>
-          <a
-            href="/#contact"
-            className="inline-block bg-[#8A9A86] hover:bg-[#748570] text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1"
-          >
-            Get in Touch
-          </a>
-        </motion.div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#EAE4D9] py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-center text-[#5C6656]">
-          <p>© {new Date().getFullYear()} Natalie Bull. All rights reserved.</p>
-        </div>
-      </footer>
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
