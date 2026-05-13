@@ -157,7 +157,7 @@ const GettingStartedSection = () => {
                 <div className="w-12 h-12 bg-[#FFAA80]/25 rounded-full flex items-center justify-center mb-6">
                   <span className="font-['Cormorant_Garamond'] text-2xl font-medium text-[#C87961]">{pathway.number}</span>
                 </div>
-                <h4 className="font-['Cormorant_Garamond'] text-xl font-medium text-[#2A3026] mb-4">
+                <h4 className="font-['Cormorant_Garamond'] text-xl font-bold text-[#2A3026] mb-4">
                   {pathway.title}
                 </h4>
                 <p className="text-[#5C6656] text-sm leading-relaxed">
