@@ -113,8 +113,8 @@ const GettingStartedSection = () => {
     },
     {
       number: "3",
-      title: "Victims Services Counselling (Coming Soon)",
-      description: "I am currently in the process of becoming an Approved Victims Services Provider. Soon, I will offer specialised support for those eligible for counselling through Victims Services NSW."
+      title: "Victims Services Counselling",
+      description: "I am an Approved Victims Services Provider. I offer specialised support for those eligible for counselling through Victims Services NSW."
     }
   ];
 
